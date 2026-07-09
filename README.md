@@ -1,2 +1,2 @@
 # DecodeLabs-Internship
-TASK 01- Student Survival Hub
+This repository contains all the tasks and projects completed during my Decode Labs Full Stack Development Internship.
