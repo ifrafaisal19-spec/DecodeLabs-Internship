@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Student Survival Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-title">
+    <span class="masthead-kicker">Backend-Connected Console</span>
+    <h1>Student Survival Hub</h1>
+  </div>
+  <div class="status-stamp" id="statusStamp" data-state="checking">
+    <span id="statusText">CHECKING&hellip;</span>
+  </div>
+</header>
+
+<div class="cabinet">
+
+  <nav class="tabs" id="tabs" aria-label="Resource folders"></nav>
+
+  <main class="folder-panel">
+    <div class="folder-panel-inner">
+
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker" id="panelCode">STU</p>
+          <h2 id="panelTitle">Students</h2>
+        </div>
+        <p class="panel-count" id="panelCount">0 entries</p>
+      </div>
+
+      <div class="panel-body">
+
+        <section class="card intake" aria-labelledby="formHeading">
+          <h3 id="formHeading">Add entry</h3>
+          <form id="entryForm"></form>
+          <p class="form-error" id="formError" role="alert"></p>
+        </section>
+
+        <section class="card ledger" aria-label="Entries">
+          <div id="entryList" class="entry-list"></div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<footer class="footnote">
+  <p>Connects to <code id="apiBaseLabel"></code> — start the backend with <code>npm start</code> inside <code>backend/</code>, then reload this page.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

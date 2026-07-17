@@ -1,0 +1,117 @@
+{
+  "info": {
+    "name": "Student Survival Hub API",
+    "description": "GET and POST endpoints for the Student Survival Hub backend (Project 2)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" }
+  ],
+  "item": [
+    {
+      "name": "Students",
+      "item": [
+        { "name": "Get All Students", "request": { "method": "GET", "url": "{{baseUrl}}/students" } },
+        {
+          "name": "Create Student",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Ifra\",\n  \"semester\": 6,\n  \"cgpa\": 3.7\n}" },
+            "url": "{{baseUrl}}/students"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Assignments",
+      "item": [
+        { "name": "Get All Assignments", "request": { "method": "GET", "url": "{{baseUrl}}/assignments" } },
+        {
+          "name": "Create Assignment",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"title\": \"OS Assignment 2\",\n  \"subject\": \"Operating Systems\",\n  \"dueDate\": \"2026-07-20\"\n}" },
+            "url": "{{baseUrl}}/assignments"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Notes",
+      "item": [
+        { "name": "Get All Notes", "request": { "method": "GET", "url": "{{baseUrl}}/notes" } },
+        {
+          "name": "Create Note",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"title\": \"Induction Proofs\",\n  \"subject\": \"Discrete Math\",\n  \"content\": \"Base case + inductive step\"\n}" },
+            "url": "{{baseUrl}}/notes"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        { "name": "Get All Tasks", "request": { "method": "GET", "url": "{{baseUrl}}/tasks" } },
+        {
+          "name": "Create Task",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"title\": \"Revise K-Maps\",\n  \"priority\": \"high\"\n}" },
+            "url": "{{baseUrl}}/tasks"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Exams",
+      "item": [
+        { "name": "Get All Exams", "request": { "method": "GET", "url": "{{baseUrl}}/exams" } },
+        {
+          "name": "Create Exam",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"subject\": \"Digital Logic\",\n  \"date\": \"2026-07-25\",\n  \"syllabus\": \"Chapters 1-5\"\n}" },
+            "url": "{{baseUrl}}/exams"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pomodoro",
+      "item": [
+        { "name": "Get All Sessions", "request": { "method": "GET", "url": "{{baseUrl}}/pomodoro" } },
+        {
+          "name": "Create Session",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"task\": \"Study for Digital Logic exam\",\n  \"duration\": 25\n}" },
+            "url": "{{baseUrl}}/pomodoro"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Planner",
+      "item": [
+        { "name": "Get All Plans", "request": { "method": "GET", "url": "{{baseUrl}}/planner" } },
+        {
+          "name": "Create Plan",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"day\": \"Monday\",\n  \"activity\": \"Finish Project 2 backend\"\n}" },
+            "url": "{{baseUrl}}/planner"
+          }
+        }
+      ]
+    }
+  ]
+}
